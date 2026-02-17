@@ -10,15 +10,17 @@ export function GithubIssues({ issues }: GithubIssuesProps) {
     }
 
     const getTagColor = (tag: string) => {
-        switch (tag.toLowerCase()) {
-            case 'infra':
-                return 'bg-purple-500/20 text-purple-400';
-            case 'bug':
-                return 'bg-red-500/20 text-red-400';
-            case 'feature':
-                return 'bg-blue-500/20 text-blue-400';
-            default:
-                return 'bg-slate-500/20 text-slate-400';
+        if (tag) {
+            switch (tag.toLowerCase()) {
+                case 'infra':
+                    return 'bg-purple-500/20 text-purple-400';
+                case 'bug':
+                    return 'bg-red-500/20 text-red-400';
+                case 'feature':
+                    return 'bg-blue-500/20 text-blue-400';
+                default:
+                    return 'bg-slate-500/20 text-slate-400';
+            }
         }
     };
 

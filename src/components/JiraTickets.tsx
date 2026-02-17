@@ -10,26 +10,32 @@ export function JiraTickets({ tickets }: JiraTicketsProps) {
     }
 
     const getPriorityClass = (priority: string) => {
-        switch (priority.toLowerCase()) {
-            case 'high':
-            case 'critical':
-                return 'priority-high';
-            case 'medium':
-                return 'priority-medium';
-            default:
-                return 'priority-low';
+        //console.log("Priority: ", priority);
+        if (priority) {
+            switch (priority.toLowerCase()) {
+                case 'high':
+                case 'critical':
+                    return 'priority-high';
+                case 'medium':
+                    return 'priority-medium';
+                default:
+                    return 'priority-low';
+            }
         }
     };
 
     const getPriorityBadgeClass = (priority: string) => {
-        switch (priority.toLowerCase()) {
-            case 'high':
-            case 'critical':
-                return 'badge-high';
-            case 'medium':
-                return 'badge-medium';
-            default:
-                return 'badge-medium';
+        //console.log("Priority: ", priority);
+        if (priority) {
+            switch (priority.toLowerCase()) {
+                case 'high':
+                case 'critical':
+                    return 'badge-high';
+                case 'medium':
+                    return 'badge-medium';
+                default:
+                    return 'badge-medium';
+            }
         }
     };
 

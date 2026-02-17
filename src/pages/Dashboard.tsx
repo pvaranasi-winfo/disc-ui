@@ -25,6 +25,9 @@ export function Dashboard() {
         try {
             // const data = await fetchDashboardDataFromApi(environment);
             const data = await dashboardApi.fetchDashboardData(environment);
+
+            
+
             setDashboardData(data);
         } catch (err : any) {
             setError(err.message || 'Unknown error');
@@ -74,12 +77,13 @@ export function Dashboard() {
 
     return (
         <div className="dashboard-container min-h-screen p-8">
+            
             <div className="max-w-7xl mx-auto">
                 <DashboardHeader
                     environment={environment}
                     onEnvironmentChange={handleEnvironmentChange}
                     onRefresh={fetchDashboardData}
-                    lastScan={dashboardData.scanTimestamp}
+                    lastScan={dashboardData.scanTimeStamp}
                     runId={dashboardData.runId}
                 />
 

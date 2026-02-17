@@ -11,24 +11,14 @@ interface DashboardHeaderProps {
 export function DashboardHeader({ environment, onEnvironmentChange, onRefresh, lastScan, runId }: DashboardHeaderProps) {
     const environments: Environment[] = ['DEV', 'UAT', 'PROD'];
 
-    const formatDateTime = (dateString: string) => {
-        const date = new Date(dateString);
-        return date.toLocaleString('en-GB', {
-            day: '2-digit',
-            month: '2-digit',
-            year: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit',
-            hour12: false
-        }).replace(',', '');
-    };
+    
 
     return (
         <div className="flex items-center justify-between mb-8">
             <div>
                 <h1 className="text-2xl font-bold text-white mb-2">WinfoTest Discovery Dashboard</h1>
                 <p className="text-sm text-slate-400">
-                    Last Scan: {formatDateTime(lastScan)} | Run ID: {runId}
+                    Last Scan: {lastScan} | Run ID: {runId}
                 </p>
             </div>
 

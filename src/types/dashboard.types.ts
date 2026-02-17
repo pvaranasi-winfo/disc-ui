@@ -55,7 +55,7 @@ export interface Insights {
 export interface DashboardResponse {
     id: string;
     environment: string;
-    scanTimestamp: string;
+    scanTimeStamp: string;
     runId: string;
     summaryMetrics: SummaryMetrics;
     components: Component[];
