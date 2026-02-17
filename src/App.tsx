@@ -6,7 +6,7 @@ import { Dashboard } from './pages/Dashboard';
 
 function App() {
   return (
-    <Router basename='/wt-discovery-ui/'>
+    <Router basename='/'>
       <Routes>
         <Route path="/" element={<Dashboard />} />
       </Routes>

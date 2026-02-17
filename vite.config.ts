@@ -17,7 +17,7 @@ export default defineConfig({
       ]
     })
   ],
-  base: '/wt-discovery-ui/',
+  base: '/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

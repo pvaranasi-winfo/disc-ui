@@ -9,7 +9,7 @@ import { dashboardApi } from '../services/dashboardApi';
 import type { DashboardResponse, Environment } from '../types/dashboard.types';
 
 export function Dashboard() {
-    const [environment, setEnvironment] = useState<Environment>('DEV');
+    const [environment, setEnvironment] = useState<Environment>(import.meta.env.RECORD_ID);
     const [dashboardData, setDashboardData] = useState<DashboardResponse | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);

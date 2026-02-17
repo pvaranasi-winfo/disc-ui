@@ -1,11 +1,11 @@
 import { api } from './api';
-import type { DashboardResponse, Environment } from '../types/dashboard.types';
+import type { DashboardResponse } from '../types/dashboard.types';
 
 export const dashboardApi = {
-    fetchDashboardData: async (env: Environment): Promise<DashboardResponse> => {
-        const env1 = "0f9eef88-c2b4-4bc3-8204-8e7b44925d9e"
+    fetchDashboardData: async (env: any): Promise<DashboardResponse> => {
+        
         //console.log(env);
-        const response = await api.get(`/Root/${env1}`);
+        const response = await api.get(`/Root/${env}`);
         return response as DashboardResponse;
     },
 };
