@@ -1,0 +1,1 @@
+TODO: The NullPointerException is occurring in the authentication service (AuthController.java, LoginFilter.java), which is not part of this repository. The fix needs to be applied to the authentication service repository. This PR is a placeholder to acknowledge the issue and will be closed once the actual fix is deployed in the auth service.
