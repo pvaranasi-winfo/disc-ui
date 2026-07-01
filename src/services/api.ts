@@ -11,12 +11,16 @@ export const api = {
   },
 
   post: async (endpoint: string, data: any) => {
+    const payload = { ...data };
+    if (payload.discount_code === null || payload.discount_code === '') {
+      delete payload.discount_code;
+    }
     const response = await fetch(`${API_BASE_URL}${endpoint}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(payload),
     });
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
