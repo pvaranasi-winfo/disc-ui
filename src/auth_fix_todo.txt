@@ -1,0 +1,1 @@
+TODO: The NullPointerException in AuthController.java and LoginFilter.java needs to be fixed in the backend authentication service repository. This repository (disc-ui) appears to be a frontend repository and does not contain the affected Java code.
