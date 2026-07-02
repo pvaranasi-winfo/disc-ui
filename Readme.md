@@ -1,0 +1,1 @@
+This is a test integration for JIRA ticket SAM1-149.
