@@ -1,0 +1,5 @@
+/*
+ * TODO: The payment timeout issue (SAM1-157) is reported to be in a backend Java service (StripeGateway.java, PaymentService.java).
+ * This repository (disc-ui) does not contain the relevant Java code.
+ * The fix needs to be applied in the backend service to increase the timeout for EU-routed payments.
+ */
