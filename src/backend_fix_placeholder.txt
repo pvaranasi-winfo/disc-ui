@@ -1,0 +1,1 @@
+This is a placeholder file. The actual fix for SAM1-151 (NullPointerException in DiscountService.java) needs to be applied in the backend repository, as DiscountService.java was not found in this repository (disc-ui).
