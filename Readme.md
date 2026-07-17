@@ -1,0 +1,1 @@
+This is a placeholder for the fix. The DiscountService.java file was not found in this repository. The fix for SAM1-151 needs to be applied in the backend repository where DiscountService.java resides. A null check should be added for the discount_code field before processing it to prevent NullPointerExceptions.
