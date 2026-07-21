@@ -11,12 +11,20 @@ export const api = {
   },
 
   post: async (endpoint: string, data: any) => {
+    // Create a copy of data to avoid modifying the original object
+    const dataToSend = { ...data };
+
+    // Remove discount_code if it's null or an empty string
+    if (dataToSend.discount_code === null || dataToSend.discount_code === '') {
+      delete dataToSend.discount_code;
+    }
+
     const response = await fetch(`${API_BASE_URL}${endpoint}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(dataToSend),
     });
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
