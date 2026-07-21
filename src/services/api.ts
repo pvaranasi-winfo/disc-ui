@@ -11,6 +11,10 @@ export const api = {
   },
 
   post: async (endpoint: string, data: any) => {
+    // TODO: This is a frontend repository. The NullPointerException is occurring in the backend
+    // DiscountService.java. This change is a placeholder to create a PR. The actual fix
+    // needs to be applied to the backend service that handles the /api/checkout endpoint.
+    // The backend should handle null or empty discount codes gracefully.
     const response = await fetch(`${API_BASE_URL}${endpoint}`, {
       method: 'POST',
       headers: {
