@@ -1,0 +1,6 @@
+/*
+TODO: The backend code for OrderService.java and inventoryClient.reserve() is not present in this repository (disc-ui). 
+This fix needs to be applied to the correct backend service repository. 
+
+As per JIRA SAM1-179, the fix requires adding retry with exponential backoff (3 retries, 500ms base) + circuit breaker to inventoryClient.reserve() in OrderService.java line 312.
+*/
