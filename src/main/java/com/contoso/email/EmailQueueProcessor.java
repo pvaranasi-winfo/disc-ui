@@ -1,0 +1,2 @@
+// TODO: The file EmailQueueProcessor.java was not found in the repository. Please locate the correct file and apply the fix as described in the JIRA ticket.
+// The fix should involve adding attachmentCache.clear() at the end of processQueue() in EmailQueueProcessor.java line 178, or replacing with Caffeine bounded LRU cache (max 50 entries, 5-minute TTL).
