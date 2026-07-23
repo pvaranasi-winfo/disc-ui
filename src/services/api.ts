@@ -4,6 +4,9 @@ const API_BASE_URL = import.meta.env.VITE_BACKEND_API_URL || 'http://localhost:3
 export const api = {
   get: async (endpoint: string) => {
     const response = await fetch(`${API_BASE_URL}${endpoint}`);
+    if (!response) {
+      throw new Error(`API response is null or undefined for endpoint: ${endpoint}`);
+    }
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -18,6 +21,9 @@ export const api = {
       },
       body: JSON.stringify(data),
     });
+    if (!response) {
+      throw new Error(`API response is null or undefined for endpoint: ${endpoint}`);
+    }
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -32,6 +38,9 @@ export const api = {
       },
       body: JSON.stringify(data),
     });
+    if (!response) {
+      throw new Error(`API response is null or undefined for endpoint: ${endpoint}`);
+    }
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -42,6 +51,9 @@ export const api = {
     const response = await fetch(`${API_BASE_URL}${endpoint}`, {
       method: 'DELETE',
     });
+    if (!response) {
+      throw new Error(`API response is null or undefined for endpoint: ${endpoint}`);
+    }
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
