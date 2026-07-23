@@ -1,0 +1,1 @@
+TODO: The payment processing logic (StripeGateway, PaymentService) is not found in this repository (disc-ui). This issue likely resides in a backend service. Please investigate the appropriate backend repository to address the 30-second timeout for EU transactions. The workaround suggests increasing the timeout to 60s.
