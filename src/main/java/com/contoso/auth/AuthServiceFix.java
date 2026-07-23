@@ -1,2 +1,1 @@
-// TODO: Fix NullPointerException in AuthController.java and LoginFilter.java
-// The original files were not found in the repository. This is a placeholder.
+// TODO: The relevant files (AuthController.java, LoginFilter.java) were not found in this repository. This PR is a placeholder to acknowledge the issue. The fix needs to be applied in the authentication service repository.
