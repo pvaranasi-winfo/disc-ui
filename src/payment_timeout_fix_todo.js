@@ -1,0 +1,1 @@
+// TODO: The payment API timeout fix needs to be applied in the backend service, likely in a Java project containing StripeGateway.java and PaymentService.java. This repository (disc-ui) appears to be a frontend application and does not contain the relevant backend code.
