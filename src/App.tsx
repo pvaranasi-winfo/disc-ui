@@ -15,4 +15,4 @@ function App() {
 }
 
 export default App
-
+// TODO: The actual fix for SAM1-180 (NullPointerException in Auth service) needs to be applied in the backend authentication service repository, as the relevant Java files (AuthController.java, LoginFilter.java) were not found in this repository (disc-ui).
