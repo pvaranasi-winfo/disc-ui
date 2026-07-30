@@ -26,7 +26,8 @@ export function Dashboard() {
             // const data = await fetchDashboardDataFromApi(environment);
             const data = await dashboardApi.fetchDashboardData(environment);
 
-            
+            // TODO: Implement payment timeout logic here or in a dedicated payment service.
+            // This is a placeholder as no specific payment-related code was found.
 
             setDashboardData(data);
         } catch (err : any) {
