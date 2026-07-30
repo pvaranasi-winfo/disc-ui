@@ -1,0 +1,1 @@
+TODO: The actual fix for SAM1-165 (NullPointerException in AuthController.java and LoginFilter.java) is in a backend service, not in this frontend repository. This PR is a placeholder to track the issue.
