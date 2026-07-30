@@ -7,6 +7,7 @@ export const api = {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
+    // TODO: Add null checks for responses from authentication-related endpoints if they can return null.
     return response.json();
   },
 
@@ -21,6 +22,7 @@ export const api = {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
+    // TODO: Add null checks for responses from authentication-related endpoints if they can return null.
     return response.json();
   },
 
@@ -35,6 +37,7 @@ export const api = {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
+    // TODO: Add null checks for responses from authentication-related endpoints if they can return null.
     return response.json();
   },
 
@@ -45,6 +48,7 @@ export const api = {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
+    // TODO: Add null checks for responses from authentication-related endpoints if they can return null.
     return response.json();
   },
 };
