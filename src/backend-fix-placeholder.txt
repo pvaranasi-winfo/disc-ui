@@ -1,0 +1,1 @@
+TODO: The OrderService.java file was not found in this repository. The fix for SAM1-179 (adding retry logic with exponential backoff and a circuit breaker to inventoryClient.reserve() in OrderService.java) needs to be applied to the backend service repository. This file serves as a placeholder to indicate the missing backend code.
