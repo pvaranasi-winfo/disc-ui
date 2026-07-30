@@ -4,10 +4,17 @@ const API_BASE_URL = import.meta.env.VITE_BACKEND_API_URL || 'http://localhost:3
 export const api = {
   get: async (endpoint: string) => {
     const response = await fetch(`${API_BASE_URL}${endpoint}`);
+    if (!response) {
+      throw new Error('Network error: No response received.');
+    }
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    return response.json();
+    try {
+      return response.json();
+    } catch (error) {
+      throw new Error(`Error parsing JSON response: ${error}`);
+    }
   },
 
   post: async (endpoint: string, data: any) => {
@@ -18,10 +25,17 @@ export const api = {
       },
       body: JSON.stringify(data),
     });
+    if (!response) {
+      throw new Error('Network error: No response received.');
+    }
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    return response.json();
+    try {
+      return response.json();
+    } catch (error) {
+      throw new Error(`Error parsing JSON response: ${error}`);
+    }
   },
 
   put: async (endpoint: string, data: any) => {
@@ -32,19 +46,33 @@ export const api = {
       },
       body: JSON.stringify(data),
     });
+    if (!response) {
+      throw new Error('Network error: No response received.');
+    }
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    return response.json();
+    try {
+      return response.json();
+    } catch (error) {
+      throw new Error(`Error parsing JSON response: ${error}`);
+    }
   },
 
   delete: async (endpoint: string) => {
     const response = await fetch(`${API_BASE_URL}${endpoint}`, {
       method: 'DELETE',
     });
+    if (!response) {
+      throw new Error('Network error: No response received.');
+    }
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    return response.json();
+    try {
+      return response.json();
+    } catch (error) {
+      throw new Error(`Error parsing JSON response: ${error}`);
+    }
   },
 };
