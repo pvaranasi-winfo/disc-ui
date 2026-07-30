@@ -1,0 +1,1 @@
+<!-- TODO: Implement fix for SAM1-157. Payment API intermittently timing out after exactly 30 seconds. -->
