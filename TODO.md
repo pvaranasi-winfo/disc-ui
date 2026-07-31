@@ -1,0 +1,1 @@
+TODO: The file EmailQueueProcessor.java was not found in this repository. The fix for SAM1-160 requires modifying EmailQueueProcessor.java to clear the attachmentCache or replace it with a Caffeine bounded LRU cache. Please verify the correct repository for the background worker service.
