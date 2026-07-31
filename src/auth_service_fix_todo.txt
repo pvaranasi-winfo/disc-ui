@@ -1,0 +1,32 @@
+/*
+TODO: The authentication service code (AuthController.java, LoginFilter.java, UserSession.java) was not found in this repository (pvaranasi-winfo/disc-ui). 
+
+The JIRA ticket SAM1-155 indicates a NullPointerException in AuthController.java at line 87 and LoginFilter.java at line 42, specifically when trying to invoke 'UserSession.getToken()' because 'session' is null.
+
+This suggests that the 'session' object is not being properly initialized or retrieved from the session store. A potential fix would involve adding a null check for the 'session' object before attempting to access its methods, or ensuring that the session store always returns a valid session object (or an empty/default one) instead of null.
+
+Example of a potential fix (pseudo-code):
+
+In AuthController.java (around line 87):
+```java
+if (session != null) {
+    return session.getToken();
+} else {
+    // Handle null session, e.g., throw an exception, redirect to login, or return a default/error token
+    throw new AuthenticationException("User session is null.");
+}
+```
+
+In LoginFilter.java (around line 42):
+```java
+UserSession session = sessionStore.getSession(key);
+if (session == null) {
+    // Handle null session, e.g., redirect to login or create a new session
+    response.sendRedirect("/login");
+    return;
+}
+// Proceed with session validation
+```
+
+This placeholder file is created to indicate that the relevant code for the authentication service was not found in this repository. The fix needs to be applied to the correct authentication service repository.
+*/
