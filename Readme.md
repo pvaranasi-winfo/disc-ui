@@ -1,0 +1,1 @@
+This repository (disc-ui) does not contain the authentication service code (AuthController.java, LoginFilter.java). The fix for SAM1-165 needs to be applied in the correct authentication service repository. The fix should involve adding a null check for the 'session' object before attempting to invoke 'UserSession.getToken()'.
