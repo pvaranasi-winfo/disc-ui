@@ -1,0 +1,1 @@
+TODO: The authentication service code is not found in this repository. This PR is a placeholder to track the fix for SAM1-155. The actual fix needs to be applied to the authentication service repository, specifically in `AuthController.java` and `LoginFilter.java` to handle potential null `UserSession` objects.
