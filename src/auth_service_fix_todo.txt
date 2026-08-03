@@ -1,0 +1,4 @@
+
+TODO: The authentication service code (AuthController.java, LoginFilter.java) was not found in this repository (disc-ui).
+This file is a placeholder to create a PR for JIRA SAM1-169.
+The actual fix for the NullPointerException in the auth service needs to be applied in the correct repository.
