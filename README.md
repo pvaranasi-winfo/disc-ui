@@ -1,0 +1,3 @@
+## Monthly sales report date format fix
+
+**TODO**: The `ReportFormatter.java` file mentioned in JIRA ticket SAM1-171 was not found in this repository. This repository appears to be a frontend UI. The fix for the date format issue (changing `DateTimeFormatter.ofPattern('MM/dd/yyyy')` to `DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT).withLocale(userLocale)`) needs to be applied in the backend reporting service repository where `ReportFormatter.java` resides.
