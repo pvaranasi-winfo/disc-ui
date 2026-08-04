@@ -1,0 +1,1 @@
+TODO: The payment timeout fix needs to be applied in the backend service (StripeGateway.java, PaymentService.java). This repository (disc-ui) does not contain the relevant code.
