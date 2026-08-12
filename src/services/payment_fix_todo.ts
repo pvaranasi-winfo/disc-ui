@@ -1,0 +1,1 @@
+// TODO: Implement fix for payment timeout issue. The relevant Java files (StripeGateway.java, PaymentService.java) were not found in this repository. This repository appears to be a TypeScript/JavaScript project. Further investigation is needed to locate the correct repository containing the payment processing logic.
