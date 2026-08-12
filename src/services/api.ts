@@ -48,3 +48,7 @@ export const api = {
     return response.json();
   },
 };
+
+// TODO: Investigate memory leak related to 'attachmentCache' in background worker service. 
+// This repository (disc-ui) does not appear to contain the 'attachmentCache' variable. 
+// The issue might be in a different backend service.
