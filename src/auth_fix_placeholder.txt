@@ -1,0 +1,1 @@
+TODO: The files AuthController.java and LoginFilter.java were not found in this repository. This PR is a placeholder to acknowledge the issue. The fix for the NullPointerException in the authentication service needs to be applied in the correct backend repository.
