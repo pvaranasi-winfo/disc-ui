@@ -7,6 +7,9 @@ export const api = {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
+    if (!response) { // Added null check for response
+      throw new Error('Response is null');
+    }
     return response.json();
   },
 
@@ -20,6 +23,9 @@ export const api = {
     });
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    if (!response) { // Added null check for response
+      throw new Error('Response is null');
     }
     return response.json();
   },
@@ -35,6 +41,9 @@ export const api = {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
+    if (!response) { // Added null check for response
+      throw new Error('Response is null');
+    }
     return response.json();
   },
 
@@ -44,6 +53,9 @@ export const api = {
     });
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    if (!response) { // Added null check for response
+      throw new Error('Response is null');
     }
     return response.json();
   },
