@@ -1,0 +1,1 @@
+TODO: The payment API timeout issue (SAM1-157) is described with Java stack traces (StripeGateway.java, PaymentService.java). This repository (pvaranasi-winfo/disc-ui) appears to be a UI repository and does not contain the relevant Java backend code. The fix for SAM1-157 needs to be applied in the correct backend service repository.
