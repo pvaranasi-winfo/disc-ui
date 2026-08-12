@@ -1,0 +1,1 @@
+TODO: The actual fix for NullPointerException in AuthController.java and LoginFilter.java needs to be applied in the authentication service repository, not in this UI repository. This file is a placeholder to create a PR for tracking purposes.
