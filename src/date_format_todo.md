@@ -1,0 +1,1 @@
+TODO: The JIRA ticket KAN-8 mentions `ReportFormatter.java` at line 203 to fix the date format issue. However, this repository `pvaranasi-winfo/disc-ui` does not appear to be a Java project and `ReportFormatter.java` was not found. Further investigation is needed to locate the correct repository or file responsible for date formatting in the monthly sales report.
