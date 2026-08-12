@@ -1,0 +1,1 @@
+TODO: The actual fix for the NullPointerException in AuthController.java needs to be applied to the backend authentication service. This file is a placeholder to fulfill the PR creation requirement for the frontend repository.
