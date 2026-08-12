@@ -48,3 +48,9 @@ export const api = {
     return response.json();
   },
 };
+
+// TODO: Investigate and implement clearing mechanism for 'attachmentCache' to prevent memory leaks.
+// The JIRA ticket KAN-17 mentions a HashMap 'attachmentCache' that is never cleared,
+// leading to OOMKills in the background worker service.
+// The relevant code for 'attachmentCache' was not found in this repository.
+// This placeholder is to acknowledge the issue and provide a starting point for the fix.
