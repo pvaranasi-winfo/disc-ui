@@ -20,6 +20,6 @@ public class EmailQueueProcessor {
         //         mailSender.send(job, attachment);
         //     }
         // }
-        // missing: attachmentCache.clear();
+        attachmentCache.clear(); // Fix: Clear the cache after processing a batch
     }
 }
