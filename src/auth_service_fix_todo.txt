@@ -1,0 +1,1 @@
+TODO: The actual fix for SAM1-165 (NullPointerException in AuthController.java and LoginFilter.java) needs to be applied to the backend authentication service, not this 'disc-ui' repository. This file is a placeholder to create a PR.
