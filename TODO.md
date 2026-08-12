@@ -1,1 +1,3 @@
-TODO: The file EmailQueueProcessor.java was not found in this repository. The fix for SAM1-160 requires modifying EmailQueueProcessor.java to clear the attachmentCache or replace it with a Caffeine bounded LRU cache. Please verify the correct repository for the background worker service.
+## TODO: EmailQueueProcessor.java not found
+
+The JIRA ticket SAM1-160 describes a memory leak in `EmailQueueProcessor.java`. This file was not found in the `pvaranasi-winfo/disc-ui` repository. It is likely located in a different, backend service repository. This PR is a placeholder to acknowledge the issue and indicate that the relevant code was not found in this repository.
