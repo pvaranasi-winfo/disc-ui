@@ -1,0 +1,1 @@
+TODO: The authentication service code is not in this repository. The fix for KAN-6 (NullPointerException in AuthController.java and LoginFilter.java) needs to be applied to the actual authentication service repository. This file is a placeholder to fulfill the PR creation requirement.
