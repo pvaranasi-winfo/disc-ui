@@ -1,0 +1,1 @@
+// TODO: Implement fix for KAN-15. The EmailQueueProcessor.java file was not found in this repository. This fix should involve adding attachmentCache.clear() at the end of processQueue() in EmailQueueProcessor.java or replacing it with a Caffeine bounded LRU cache.
