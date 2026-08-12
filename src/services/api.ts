@@ -48,3 +48,7 @@ export const api = {
     return response.json();
   },
 };
+
+// TODO: KAN-8 The date formatting issue described in the JIRA ticket is likely in a backend service (ReportFormatter.java).
+// This frontend repository (disc-ui) does not appear to contain the relevant date formatting logic.
+// A backend fix is required to change 'MM/dd/yyyy' to 'DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT).withLocale(userLocale)'.
