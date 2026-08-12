@@ -48,3 +48,5 @@ export const api = {
     return response.json();
   },
 };
+
+// TODO: Investigate potential NullPointerException in authentication service calls. Add null checks if necessary. [KAN-5]
