@@ -3,6 +3,9 @@ const API_BASE_URL = import.meta.env.VITE_BACKEND_API_URL || 'http://localhost:3
 
 export const api = {
   get: async (endpoint: string) => {
+    if (!API_BASE_URL) {
+      throw new Error('API_BASE_URL is not defined');
+    }
     const response = await fetch(`${API_BASE_URL}${endpoint}`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -11,6 +14,9 @@ export const api = {
   },
 
   post: async (endpoint: string, data: any) => {
+    if (!API_BASE_URL) {
+      throw new Error('API_BASE_URL is not defined');
+    }
     const response = await fetch(`${API_BASE_URL}${endpoint}`, {
       method: 'POST',
       headers: {
@@ -25,6 +31,9 @@ export const api = {
   },
 
   put: async (endpoint: string, data: any) => {
+    if (!API_BASE_URL) {
+      throw new Error('API_BASE_URL is not defined');
+    }
     const response = await fetch(`${API_BASE_URL}${endpoint}`, {
       method: 'PUT',
       headers: {
@@ -39,6 +48,9 @@ export const api = {
   },
 
   delete: async (endpoint: string) => {
+    if (!API_BASE_URL) {
+      throw new Error('API_BASE_URL is not defined');
+    }
     const response = await fetch(`${API_BASE_URL}${endpoint}`, {
       method: 'DELETE',
     });
