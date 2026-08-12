@@ -1,5 +1,9 @@
 // API service using environment variables
-const API_BASE_URL = import.meta.env.VITE_BACKEND_API_URL || 'http://localhost:3000/api';
+const API_BASE_URL = import.meta.env.VITE_BACKEND_API_URL;
+
+if (!API_BASE_URL) {
+  throw new Error('VITE_BACKEND_API_URL is not defined in environment variables.');
+}
 
 export const api = {
   get: async (endpoint: string) => {
@@ -7,7 +11,11 @@ export const api = {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    return response.json();
+    try {
+      return await response.json();
+    } catch (error) {
+      throw new Error(`Error parsing JSON response: ${error}`);
+    }
   },
 
   post: async (endpoint: string, data: any) => {
@@ -21,7 +29,11 @@ export const api = {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    return response.json();
+    try {
+      return await response.json();
+    } catch (error) {
+      throw new Error(`Error parsing JSON response: ${error}`);
+    }
   },
 
   put: async (endpoint: string, data: any) => {
@@ -35,7 +47,11 @@ export const api = {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    return response.json();
+    try {
+      return await response.json();
+    } catch (error) {
+      throw new Error(`Error parsing JSON response: ${error}`);
+    }
   },
 
   delete: async (endpoint: string) => {
@@ -45,6 +61,10 @@ export const api = {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    return response.json();
+    try {
+      return await response.json();
+    } catch (error) {
+      throw new Error(`Error parsing JSON response: ${error}`);
+    }
   },
 };
