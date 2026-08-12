@@ -48,3 +48,6 @@ export const api = {
     return response.json();
   },
 };
+
+// TODO: KAN-17 - The memory leak described in the JIRA ticket (HashMap attachmentCache never cleared in background worker service)
+// does not appear to be present in this repository (disc-ui). This issue likely resides in a backend service.
