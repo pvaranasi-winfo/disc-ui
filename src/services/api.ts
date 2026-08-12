@@ -11,6 +11,8 @@ export const api = {
   },
 
   post: async (endpoint: string, data: any) => {
+    // TODO: SAM1-190 - Backend PaymentService.java needs timeout increase and retry logic.
+    // Consider adding client-side retry logic for payment-related API calls if appropriate.
     const response = await fetch(`${API_BASE_URL}${endpoint}`, {
       method: 'POST',
       headers: {
