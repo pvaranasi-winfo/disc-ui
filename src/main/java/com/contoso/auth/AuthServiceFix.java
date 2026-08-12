@@ -1,0 +1,1 @@
+TODO: Implement fix for NullPointerException in Auth service. The relevant files (AuthController.java, LoginFilter.java, UserSession.java) were not found in the repository. This PR is a placeholder to track the issue.
