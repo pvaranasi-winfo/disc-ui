@@ -1,0 +1,1 @@
+This is a placeholder file to create a commit for JIRA SAM1-180. The actual fix for the NullPointerException in AuthController.java and LoginFilter.java needs to be applied in the backend authentication service repository.
