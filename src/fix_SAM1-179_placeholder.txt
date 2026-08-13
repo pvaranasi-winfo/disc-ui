@@ -1,0 +1,1 @@
+TODO: The actual fix for SAM1-179 (adding retry logic and circuit breaker to inventoryClient.reserve()) needs to be applied in the backend OrderService, not in this UI repository. This file is a placeholder to create a PR.
