@@ -47,4 +47,21 @@ export const api = {
     }
     return response.json();
   },
+
+  checkout: async (data: any) => {
+    if (!data.discountCoupon) {
+      data.discountCoupon = null; // Ensure discountCoupon is explicitly set to null if undefined
+    }
+    const response = await fetch(`${API_BASE_URL}/checkout`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  },
 };
