@@ -47,6 +47,7 @@ export function JiraTickets({ tickets }: JiraTicketsProps) {
             </div>
 
             <div className="p-3">
+                {/* TODO: KAN-14 Investigate potential memory leaks here. If 'tickets' prop is frequently updated with large datasets, or if JiraTicket has hidden subscriptions, ensure proper cleanup. */}
                 {tickets.map((ticket) => (
                     <div key={ticket.id} className={`jira-ticket ${getPriorityClass(ticket.priority)}`}>
                         <div className="flex items-start justify-between mb-2">
