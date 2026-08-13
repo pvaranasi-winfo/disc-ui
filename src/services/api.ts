@@ -4,7 +4,7 @@ const API_BASE_URL = import.meta.env.VITE_BACKEND_API_URL || 'http://localhost:3
 export const api = {
   get: async (endpoint: string) => {
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 seconds timeout
+    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
     const response = await fetch(`${API_BASE_URL}${endpoint}`, { signal: controller.signal });
     clearTimeout(timeoutId);
     if (!response.ok) {
@@ -15,14 +15,14 @@ export const api = {
 
   post: async (endpoint: string, data: any) => {
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 seconds timeout
+    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
     const response = await fetch(`${API_BASE_URL}${endpoint}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
-      signal: controller.signal
+      signal: controller.signal,
     });
     clearTimeout(timeoutId);
     if (!response.ok) {
@@ -33,14 +33,14 @@ export const api = {
 
   put: async (endpoint: string, data: any) => {
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 seconds timeout
+    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
     const response = await fetch(`${API_BASE_URL}${endpoint}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
-      signal: controller.signal
+      signal: controller.signal,
     });
     clearTimeout(timeoutId);
     if (!response.ok) {
@@ -51,10 +51,10 @@ export const api = {
 
   delete: async (endpoint: string) => {
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 seconds timeout
+    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
     const response = await fetch(`${API_BASE_URL}${endpoint}`, {
       method: 'DELETE',
-      signal: controller.signal
+      signal: controller.signal,
     });
     clearTimeout(timeoutId);
     if (!response.ok) {
