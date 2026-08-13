@@ -1,0 +1,1 @@
+// TODO: Implement fix for memory leak in background worker service. The attachmentCache HashMap needs to be cleared periodically to prevent OOMKills. [KAN-17]
