@@ -7,7 +7,11 @@ export const api = {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    return response.json();
+    const data = await response.json();
+    if (!data) {
+      throw new Error(`API returned no data for endpoint: ${endpoint}`);
+    }
+    return data;
   },
 
   post: async (endpoint: string, data: any) => {
