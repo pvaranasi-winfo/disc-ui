@@ -1,0 +1,1 @@
+TODO: Implement EmailQueueProcessor and clear attachmentCache to fix memory leak as described in KAN-16.
