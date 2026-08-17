@@ -1,0 +1,1 @@
+TODO: The OrderService.java file was not found in this repository. The fix for KAN-22 (adding retry with exponential backoff and circuit breaker to inventoryClient.reserve() in OrderService.java line 312) needs to be applied in the correct backend service repository. This file is a placeholder to indicate that a backend fix is still pending.
