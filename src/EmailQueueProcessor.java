@@ -1,0 +1,1 @@
+// TODO: Implement fix for memory leak in EmailQueueProcessor. The attachmentCache needs to be cleared after each batch, or replaced with a Caffeine bounded LRU cache. [KAN-12]
