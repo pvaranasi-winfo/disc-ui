@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { DashboardHeader } from '../components/DashboardHeader';
 import { SummaryCards } from '../components/SummaryCards';
 import { ComponentCard } from '../components/ComponentCard';
@@ -14,26 +14,33 @@ export function Dashboard() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
+    const isMounted = useRef(true);
 
     useEffect(() => {
+        isMounted.current = true;
         fetchDashboardData();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+
+        return () => {
+            isMounted.current = false;
+        };
     }, [environment]);
 
     const fetchDashboardData = async () => {
         setLoading(true);
         try {
-            // const data = await fetchDashboardDataFromApi(environment);
             const data = await dashboardApi.fetchDashboardData(environment);
-
-            
-
-            setDashboardData(data);
+            if (isMounted.current) {
+                setDashboardData(data);
+            }
         } catch (err : any) {
-            setError(err.message || 'Unknown error');
-            setDashboardData(null);
+            if (isMounted.current) {
+                setError(err.message || 'Unknown error');
+                setDashboardData(null);
+            }
         } finally {
-            setLoading(false);
+            if (isMounted.current) {
+                setLoading(false);
+            }
         }
     };
 
