@@ -48,3 +48,5 @@ export const api = {
     return response.json();
   },
 };
+
+// TODO: KAN-17 - Investigate memory leak in background worker service. The attachmentCache is likely in a backend service, not directly in this UI repository. Further investigation is needed in the backend codebase to identify and clear the cache.
