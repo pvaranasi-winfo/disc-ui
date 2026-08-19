@@ -1,6 +1,11 @@
 // API service using environment variables
 const API_BASE_URL = import.meta.env.VITE_BACKEND_API_URL || 'http://localhost:3000/api';
 
+// Add a null check for API_BASE_URL
+if (!API_BASE_URL) {
+  throw new Error('API_BASE_URL is not defined. Please set VITE_BACKEND_API_URL in your environment variables.');
+}
+
 export const api = {
   get: async (endpoint: string) => {
     const response = await fetch(`${API_BASE_URL}${endpoint}`);
