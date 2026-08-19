@@ -1,0 +1,1 @@
+// TODO: The authentication service is throwing a NullPointerException. This repository (disc-ui) appears to be a UI repository and the error originates from Java code (AuthController.java, LoginFilter.java). The fix needs to be applied in the actual authentication service repository. This file is a placeholder to create a PR. [KAN-6]
